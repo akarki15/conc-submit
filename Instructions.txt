@@ -1,4 +1,8 @@
+Approximate hours spent working on the project: 8
+
+
 Running instructions:
+
 	1. Open command terminal. cd into assignment directory. 
 	2. Compile all java files. i.e. javac *.java
 	3. The usage for calculating Concordance of an input file is: 
@@ -7,8 +11,22 @@ Running instructions:
 			
 			<path> 	 Path to the input text file
 			L 	 Optional parameter that displays line numbers
+	
+Example Usages: 
 
+	Example 1: Prints Concordance of this assignment's prompt without line numbers
+			
+			java Concordance testFiles/Prompt.txt
+			
+	Example 2: Prints Concordance of this assignment's prompt with line numbers
+	
+			java Concordance testFiles/Prompt.txt L
+			
+	Example 3: Prints Concordance of HuckleberryFinn.txt (included in testFiles dir) without line numbers
+	
+			java Concordance testFiles/HuckleberryFinn.txt
 
+	
 Assumptions made: 
 	1. A word does not span two lines i.e. There is no return character within a word. 
 	2. A word is only composed of letters and possibly an apostrophe or a period. 
@@ -23,6 +41,7 @@ Code Overview:
 Drawback: 
 	The Line Parser does not update the sentence counter correctly for each parsed word. This is because LineParser reads the entire line first, updates the sentenceCount and then splits the line into words. 
 	One way to solve this would be to do both sentenceCount updating and splitting into words simultaneously. But given the time limitations, I found it hard to implement this method.       
+
 
  
 	 	
